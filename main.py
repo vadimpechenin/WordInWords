@@ -14,10 +14,12 @@ def selectFile(fileName):
 
 #mydoc = docx.Document()
 #Исключаем предлоги
-wordNot = ['на','под','за','к','из','по','об','от','в',
+wordNot = ['на','а','под','за','к','из','по','об','от','в',
            'у','с','о','над','около','при','перед','также',
-           'что', 'и', 'для','после','его']
-fileName = 'Образ_совместного_решения_черновик.docx'
+           'что', 'и', 'для','после','его','или']
+fileName = input('Введите название файла: ') + '.docx'
+if fileName == '.docx':
+    fileName = 'Отчет_19в_Р001_211_2024_закл.docx'
 TEXT_FILE = selectFile(fileName)
 if TEXT_FILE:
     doc = docx.Document(TEXT_FILE)
